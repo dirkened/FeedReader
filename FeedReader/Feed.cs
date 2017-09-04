@@ -14,6 +14,21 @@
     public class Feed
     {
         /// <summary>
+        /// The Creator of the of the field. Only to be used with twitrss.me
+        /// </summary>
+        public string Creator { get; set; }
+        
+        /// <summary>
+        /// The Updated timestamp of the field
+        /// </summary>
+        public string Updated { get; set; }
+        
+        /// <summary>
+        /// The Content (comment) of the field
+        /// </summary>
+        public string Content { get; set; }
+        
+        /// <summary>
         /// The Type of the feed - Rss 2.0, 1.0, 0.92, Atom or others
         /// </summary>
         public FeedType Type { get; set; }
