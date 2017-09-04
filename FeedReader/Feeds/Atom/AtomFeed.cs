@@ -36,6 +36,21 @@
         public string Icon { get; set; }
 
         /// <summary>
+        /// The "Update" element
+        /// </summary>
+        public string Updated { get; set; }
+        
+        /// <summary>
+        /// The "creator" element
+        /// </summary>
+        public string Creator { get; set; }
+        
+        /// <summary>
+        /// The "content" element
+        /// </summary>
+        public string Content { get; set; }
+        
+        /// <summary>
         /// The "id" element
         /// </summary>
         public string Id { get; set; }
@@ -102,6 +117,9 @@
             this.Logo = feed.GetValue("logo");
             this.Rights = feed.GetValue("rights");
             this.Subtitle = feed.GetValue("subtitle");
+            this.Updated = feed.GetValue("updated");
+            this.Content = feed.GetValue("content");
+            this.Creator = feed.GetValue("creator");
 
             this.Links = feed.GetElements("link").Select(x => new AtomLink(x)).ToList();
 
